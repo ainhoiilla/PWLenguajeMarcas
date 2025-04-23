@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family:'Hind';
+    background-color:white;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 95px;
+    width: 100%;
+    display:grid;
+    grid-template-areas: 
+    "nav"
+    "section";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr ;
+    
+}
+
+/* Barra de Navegación */
+.barraNavegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    padding: 10px 20px;
+    width: 50px;
+}
+
+.nav {
+    grid-area: nav;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav li {
+    position: relative;
+    margin: 2px;
+    padding: 20px;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.nav a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+/* Submenú */
+.submenu {
+    
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: -2px;
+    background-color: white;
+    list-style: none;
+    padding: 15px;
+    width: 99px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+}
+
+.submenu li{
+    padding: 10px;
+}
+
+.submenu li a {
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav li:hover .submenu {
+    display: block;
+    
+}
+/*iconos*/
+.iconos {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Estilo general de los artículos */
+article {
+    background: white;
+    padding: 40px;
+    
+    box-sizing: border-box;
+    
+    /* que ocupe su celda completa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+/* Título dentro del artículo */
+article h2 {
+    font-size: xx-large;
+    font-family: 'Arial Narrow Bold';
+}
+
+/* Párrafo dentro del artículo */
+article p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+}
+
+/* Imagen dentro del artículo */
+article img {
+    
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+/* El tercer artículo ocupa 2 columnas */
+article:nth-child(3) {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #f4f4f9;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
