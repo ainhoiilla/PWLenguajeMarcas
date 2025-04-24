@@ -15,6 +15,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr ;
     
+    
 }
 
 /* Barra de Navegación */
@@ -101,32 +102,32 @@ body {
 /* Contenido principal */
 section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
     
 }
 
-/* Estilo general de los artículos */
+
 article {
     background: white;
     padding: 40px;
     
     box-sizing: border-box;
     
-    /* que ocupe su celda completa */
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     word-wrap: break-word;
 }
 
-/* Título dentro del artículo */
+
 article h2 {
     font-size: xx-large;
     font-family: 'Arial Narrow Bold';
 }
 
-/* Párrafo dentro del artículo */
+
 article p {
     font-size: 1rem;
     line-height: 1.5;
@@ -134,7 +135,7 @@ article p {
     text-align: justify;
 }
 
-/* Imagen dentro del artículo */
+
 article img {
     
     width: 400px;
@@ -142,10 +143,16 @@ article img {
     display: block;
 }
 
-/* El tercer artículo ocupa 2 columnas */
+
 article:nth-child(3) {
     grid-column: span 2;
     text-align: center;
+}
+svg{
+    height:20px;
+    width:20px;
+    padding-left:20px;
+    text-decoration: none;
 }
 
 /* Pie de página */

@@ -8,9 +8,7 @@ body {
     padding: 0;
     padding-bottom: 95px;
     width: 100%;
-    grid-template-areas: 
-    "nav"
-    "contenido";
+   
 }
 /* Barra de Navegación */
 .barraNavegador {
@@ -27,7 +25,7 @@ body {
 }
 
 .nav {
-    grid-area: nav;
+  
     list-style: none;
     padding: 0;
     margin: 0;
@@ -210,4 +208,3 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
-/* Fin de los estilos */

@@ -6,17 +6,23 @@ body {
     background-color:white;
     margin: 0;
     padding: 0;
-    padding-bottom: 90px;
+    
     width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8% 80%  auto ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+     "i n i2"
+     "m  m  m"
+     "f f f";
     
 }
 
 /* Barra de Navegación */
-.barraNavegador {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+
+.logo{
+    grid-area: i;
     border-bottom: 1px solid #ddd;
 }
 
@@ -25,21 +31,22 @@ body {
     width: 50px;
 }
 
-.nav {
+.nave {
+    grid-area: n;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #ddd;
 }
 
-.nav li {
-    position: relative;
-    margin: 2px;
-    padding: 20px;
+.nave li {
+     margin: 20px;
 }
 
-.nav a {
+.nave a {
     color: black;
     text-decoration: none;
     font-size: 20px;
@@ -47,25 +54,28 @@ body {
     display: block;
 }
 
-.nav a:hover {
+.nave a:hover {
     color: gray;
     text-decoration: underline;
 }
 
 .iconos {
+    grid-area: i2;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
+    text-align: end;
+    align-content: center;
+    border-bottom: 1px solid #ddd;
 }
 /*contenido*/
 
 .indice{
-    height: 100vh;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    grid-area: m;
+    text-align:  center; 
+    align-content: center; 
     background-color:white;
-    flex-wrap: wrap;
+ 
 }
 .indice img{
     margin: 50px;
@@ -80,13 +90,15 @@ body {
 }
 /* Pie de página */
 footer {
+    grid-area: f;
     background-color: #f4f4f9;
-    padding: 20px;
+    position: fixed;
     text-align: center;
     font-size: 0.9rem;
     color: #555;
-    position: fixed;
     bottom: 0;
+
+   
     width: 100%;
 }
 footer a {
@@ -97,3 +109,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
