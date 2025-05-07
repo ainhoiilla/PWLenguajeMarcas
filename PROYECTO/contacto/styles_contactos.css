@@ -6,17 +6,21 @@ body {
     background-color:white;
     margin: 0;
     padding: 0;
-    padding-bottom: 95px;
+    height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-rows: 10% 80%  auto ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+     "i n i2"
+     "m  m  m"
+     "f f f";
     
 }
 
 /* Barra de Navegación */
-.barraNavegador {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+.logo{
+    grid-area: i;
     border-bottom: 1px solid #ddd;
 }
 
@@ -25,21 +29,23 @@ body {
     width: 50px;
 }
 
-.nav {
+.nave {
+    grid-area: n;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid #ddd;
 }
 
-.nav li {
+.nave li {
     position: relative;
     margin: 2px;
     padding: 20px;
 }
 
-.nav a {
+.nave a {
     color: black;
     text-decoration: none;
     font-size: 20px;
@@ -47,7 +53,7 @@ body {
     display: block;
 }
 
-.nav a:hover {
+.nave a:hover {
     color: gray;
     text-decoration: underline;
 }
@@ -80,18 +86,25 @@ body {
     font-size: 16px;
 }
 
-.nav li:hover .submenu {
+.nave li:hover .submenu {
     display: block;
     
 }
+
 .iconos {
+
+    grid-area: i2;
     padding: 10px 20px;
     font-size: 18px;
+    text-align: end;
     cursor: pointer;
+    border-bottom: 1px solid #ddd;
 }
+
 
 /*Contenido*/
 section {
+    grid-area: m;
     background: white;
     padding: 20px;
     
@@ -149,14 +162,14 @@ textarea {
 
 
 /* Pie de página */
+/* Pie de página */
 footer {
+    grid-area: f;
     background-color: #f4f4f9;
-    padding: 20px;
+    position: fixed;
     text-align: center;
     font-size: 0.9rem;
     color: #555;
-    position: fixed;
-    z-index: 1;
     bottom: 0;
     width: 100%;
 }

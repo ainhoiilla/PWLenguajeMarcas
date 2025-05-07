@@ -112,13 +112,10 @@ section {
 article {
     background: white;
     padding: 40px;
-    
     box-sizing: border-box;
-    
-   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    word-wrap: break-word;
+    
 }
 
 
@@ -146,7 +143,8 @@ article img {
 
 article:nth-child(3) {
     grid-column: span 2;
-    text-align: center;
+    justify-items: center;
+    
 }
 svg{
     height:20px;
@@ -174,4 +172,12 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+@media (max-width: 900px) {
+    
+    section {
+        grid-template-columns: 1fr;
+    }
 }
